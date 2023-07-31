@@ -1,0 +1,17 @@
+service: log-forwarder
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  region: eu-west-1
+  runtime: python3.9
+
+  environment:
+    S3_BUCKET_NAME: alpha-dev-private-eks-logs
+
+functions:
+  forwarder:
+    handler: forwarder.handler
+
+

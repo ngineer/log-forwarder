@@ -1,0 +1,1051 @@
+{
+    "metadata": {
+        "logStream": "kube-apiserver-audit-960315c4665fa96a1267325e344ec2a8",
+        "logGroup": "/aws/eks/eks-dev-private-cluster/cluster"
+    },
+    "logs": [
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Request",
+            "auditID": "490c2d40-66c8-4fff-b32f-5ffe2f8b23c2",
+            "stage": "ResponseStarted",
+            "requestURI": "/api/v1/nodes?allowWatchBookmarks=true&resourceVersion=504974&timeoutSeconds=391&watch=true",
+            "verb": "watch",
+            "user": {
+                "username": "system:serviceaccount:kube-system:aws-node",
+                "uid": "9e350a32-f4d9-47a1-88d1-02a336b809bb",
+                "groups": [
+                    "system:serviceaccounts",
+                    "system:serviceaccounts:kube-system",
+                    "system:authenticated"
+                ],
+                "extra": {
+                    "authentication.kubernetes.io/pod-name": [
+                        "aws-node-4m8h5"
+                    ],
+                    "authentication.kubernetes.io/pod-uid": [
+                        "06bc9aa5-426a-4f44-b705-8e2b84b47a54"
+                    ]
+                }
+            },
+            "sourceIPs": [
+                "10.73.10.112"
+            ],
+            "userAgent": "aws-k8s-agent/v0.0.0 (linux/amd64) kubernetes/$Format",
+            "objectRef": {
+                "resource": "nodes",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:18.065548Z",
+            "stageTimestamp": "2023-07-28T10:51:18.069224Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"aws-node\" of ClusterRole \"aws-node\" to ServiceAccount \"aws-node/kube-system\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "01dc58a4-a91e-4583-810b-9c95dc7f2f37",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/eks-certificates-controller",
+            "verb": "get",
+            "user": {
+                "username": "eks:certificate-controller",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "eks-certificates-controller/v0.0.0 (linux/amd64) kubernetes/$Format",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "eks-certificates-controller",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:18.469245Z",
+            "stageTimestamp": "2023-07-28T10:51:18.476101Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by RoleBinding \"eks:certificate-controller/kube-system\" of Role \"eks:certificate-controller\" to User \"eks:certificate-controller\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "b5573d08-0fd5-4ba4-9e05-8211198db090",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/eks-certificates-controller",
+            "verb": "update",
+            "user": {
+                "username": "eks:certificate-controller",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "eks-certificates-controller/v0.0.0 (linux/amd64) kubernetes/$Format",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "eks-certificates-controller",
+                "uid": "2359244b-0f9c-4db2-a20b-d5b05a7e8f01",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1",
+                "resourceVersion": "504966"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:18.478223Z",
+            "stageTimestamp": "2023-07-28T10:51:18.483910Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by RoleBinding \"eks:certificate-controller/kube-system\" of Role \"eks:certificate-controller\" to User \"eks:certificate-controller\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "b56c425a-9517-4de6-874f-5ac1508fc008",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s",
+            "verb": "get",
+            "user": {
+                "username": "eks:cloud-controller-manager",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "aws-cloud-controller-manager/v0.0.0 (linux/amd64) kubernetes/$Format/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "cloud-controller-manager",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:18.598375Z",
+            "stageTimestamp": "2023-07-28T10:51:18.601698Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"eks:cloud-controller-manager\" of ClusterRole \"eks:cloud-controller-manager\" to User \"eks:cloud-controller-manager\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "e42e1dff-dd67-46f1-af9d-78b2d5eba195",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s",
+            "verb": "update",
+            "user": {
+                "username": "eks:cloud-controller-manager",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "aws-cloud-controller-manager/v0.0.0 (linux/amd64) kubernetes/$Format/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "cloud-controller-manager",
+                "uid": "5f24867c-7937-4182-9e07-a380d989a59a",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1",
+                "resourceVersion": "504976"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:18.604399Z",
+            "stageTimestamp": "2023-07-28T10:51:18.610600Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"eks:cloud-controller-manager\" of ClusterRole \"eks:cloud-controller-manager\" to User \"eks:cloud-controller-manager\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "61aa1d11-4e42-4ea6-8abb-1caba9f089f2",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler?timeout=5s",
+            "verb": "get",
+            "user": {
+                "username": "system:kube-scheduler",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "kube-scheduler/v1.25.11 (linux/amd64) kubernetes/df10951/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "kube-scheduler",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:19.669421Z",
+            "stageTimestamp": "2023-07-28T10:51:19.673334Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"system:kube-scheduler\" of ClusterRole \"system:kube-scheduler\" to User \"system:kube-scheduler\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "9af10117-dc5c-495b-8c71-71e86743c2f9",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler?timeout=5s",
+            "verb": "update",
+            "user": {
+                "username": "system:kube-scheduler",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "kube-scheduler/v1.25.11 (linux/amd64) kubernetes/df10951/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "kube-scheduler",
+                "uid": "2c79bda6-5544-4930-8df4-c0ecabc681b3",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1",
+                "resourceVersion": "504978"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:19.674329Z",
+            "stageTimestamp": "2023-07-28T10:51:19.684441Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"system:kube-scheduler\" of ClusterRole \"system:kube-scheduler\" to User \"system:kube-scheduler\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "79ede1a8-16c3-46c2-9477-6ae983f711c0",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s",
+            "verb": "get",
+            "user": {
+                "username": "system:kube-controller-manager",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "kube-controller-manager/v1.25.11 (linux/amd64) kubernetes/df10951/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "kube-controller-manager",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:20.050785Z",
+            "stageTimestamp": "2023-07-28T10:51:20.054833Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"system:kube-controller-manager\" of ClusterRole \"system:kube-controller-manager\" to User \"system:kube-controller-manager\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "c0e1af85-ff35-48ab-b553-9a682f627652",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s",
+            "verb": "update",
+            "user": {
+                "username": "system:kube-controller-manager",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "kube-controller-manager/v1.25.11 (linux/amd64) kubernetes/df10951/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "kube-controller-manager",
+                "uid": "2e8ffbe3-42da-4170-a037-c01ac9a0feba",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1",
+                "resourceVersion": "504979"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:20.055601Z",
+            "stageTimestamp": "2023-07-28T10:51:20.061278Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"system:kube-controller-manager\" of ClusterRole \"system:kube-controller-manager\" to User \"system:kube-controller-manager\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "bb1e06e7-8ff8-4468-97e0-6be4d5c98f5f",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations?allowWatchBookmarks=true&resourceVersion=503947&timeout=7m9s&timeoutSeconds=429&watch=true",
+            "verb": "watch",
+            "user": {
+                "username": "system:kube-controller-manager",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "kube-controller-manager/v1.25.11 (linux/amd64) kubernetes/df10951/shared-informers",
+            "objectRef": {
+                "resource": "prioritylevelconfigurations",
+                "apiGroup": "flowcontrol.apiserver.k8s.io",
+                "apiVersion": "v1beta2"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:44:11.328027Z",
+            "stageTimestamp": "2023-07-28T10:51:20.329312Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"system:kube-controller-manager\" of ClusterRole \"system:kube-controller-manager\" to User \"system:kube-controller-manager\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "f5a38457-0d90-4551-9bf7-963d6a47e1fb",
+            "stage": "ResponseStarted",
+            "requestURI": "/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations?allowWatchBookmarks=true&resourceVersion=504978&timeout=7m23s&timeoutSeconds=443&watch=true",
+            "verb": "watch",
+            "user": {
+                "username": "system:kube-controller-manager",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "kube-controller-manager/v1.25.11 (linux/amd64) kubernetes/df10951/shared-informers",
+            "objectRef": {
+                "resource": "prioritylevelconfigurations",
+                "apiGroup": "flowcontrol.apiserver.k8s.io",
+                "apiVersion": "v1beta2"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:20.330010Z",
+            "stageTimestamp": "2023-07-28T10:51:20.330773Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"system:kube-controller-manager\" of ClusterRole \"system:kube-controller-manager\" to User \"system:kube-controller-manager\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "fd8accce-3b1f-4b77-9133-95343b7f2e72",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s",
+            "verb": "get",
+            "user": {
+                "username": "eks:cloud-controller-manager",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "aws-cloud-controller-manager/v0.0.0 (linux/amd64) kubernetes/$Format/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "cloud-controller-manager",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:20.612315Z",
+            "stageTimestamp": "2023-07-28T10:51:20.615285Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"eks:cloud-controller-manager\" of ClusterRole \"eks:cloud-controller-manager\" to User \"eks:cloud-controller-manager\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "9a2c8cd6-b47d-42e0-83fe-8145943bbccf",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s",
+            "verb": "update",
+            "user": {
+                "username": "eks:cloud-controller-manager",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "aws-cloud-controller-manager/v0.0.0 (linux/amd64) kubernetes/$Format/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "cloud-controller-manager",
+                "uid": "5f24867c-7937-4182-9e07-a380d989a59a",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1",
+                "resourceVersion": "504981"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:20.620037Z",
+            "stageTimestamp": "2023-07-28T10:51:20.630103Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"eks:cloud-controller-manager\" of ClusterRole \"eks:cloud-controller-manager\" to User \"eks:cloud-controller-manager\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "11654cac-d8bd-406a-ab4a-b2202a8cf9ac",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/ip-10-73-10-112.eu-west-2.compute.internal?timeout=10s",
+            "verb": "update",
+            "user": {
+                "username": "system:node:ip-10-73-10-112.eu-west-2.compute.internal",
+                "uid": "aws-iam-authenticator:184892313502:AROASWDDQZ6POKDA3M7HC",
+                "groups": [
+                    "system:bootstrappers",
+                    "system:nodes",
+                    "system:authenticated"
+                ],
+                "extra": {
+                    "accessKeyId": [
+                        "ASIASWDDQZ6PDEOG7KMQ"
+                    ],
+                    "arn": [
+                        "arn:aws:sts::184892313502:assumed-role/eks-dev-private-cluster-eks-dev-private-cluster-node/i-0278a61b539cf8ee9"
+                    ],
+                    "canonicalArn": [
+                        "arn:aws:iam::184892313502:role/eks-dev-private-cluster-eks-dev-private-cluster-node"
+                    ],
+                    "principalId": [
+                        "AROASWDDQZ6POKDA3M7HC"
+                    ],
+                    "sessionName": [
+                        "i-0278a61b539cf8ee9"
+                    ]
+                }
+            },
+            "sourceIPs": [
+                "35.179.22.72"
+            ],
+            "userAgent": "kubelet/v1.25.11 (linux/amd64) kubernetes/984f31e",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-node-lease",
+                "name": "ip-10-73-10-112.eu-west-2.compute.internal",
+                "uid": "078f227b-8b12-4089-8944-ef0bf71e5ad6",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1",
+                "resourceVersion": "504960"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:20.649129Z",
+            "stageTimestamp": "2023-07-28T10:51:20.667788Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": ""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "24f64968-71b0-4dea-a750-58cea6754b4f",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler?timeout=5s",
+            "verb": "get",
+            "user": {
+                "username": "system:kube-scheduler",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "kube-scheduler/v1.25.11 (linux/amd64) kubernetes/df10951/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "kube-scheduler",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:21.687042Z",
+            "stageTimestamp": "2023-07-28T10:51:21.689953Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"system:kube-scheduler\" of ClusterRole \"system:kube-scheduler\" to User \"system:kube-scheduler\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "b4826bda-e845-4772-9748-1524dad44f9d",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-scheduler?timeout=5s",
+            "verb": "update",
+            "user": {
+                "username": "system:kube-scheduler",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "kube-scheduler/v1.25.11 (linux/amd64) kubernetes/df10951/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "kube-scheduler",
+                "uid": "2c79bda6-5544-4930-8df4-c0ecabc681b3",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1",
+                "resourceVersion": "504982"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:21.692062Z",
+            "stageTimestamp": "2023-07-28T10:51:21.701524Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"system:kube-scheduler\" of ClusterRole \"system:kube-scheduler\" to User \"system:kube-scheduler\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Request",
+            "auditID": "9a23e723-4dfc-42cf-9dbc-f6dbe296a5f0",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/storage.k8s.io/v1/csidrivers?allowWatchBookmarks=true&resourceVersion=504033&timeout=6m32s&timeoutSeconds=392&watch=true",
+            "verb": "watch",
+            "user": {
+                "username": "system:node:ip-10-73-9-232.eu-west-2.compute.internal",
+                "uid": "aws-iam-authenticator:184892313502:AROASWDDQZ6POKDA3M7HC",
+                "groups": [
+                    "system:bootstrappers",
+                    "system:nodes",
+                    "system:authenticated"
+                ],
+                "extra": {
+                    "accessKeyId": [
+                        "ASIASWDDQZ6PC24XVAV5"
+                    ],
+                    "arn": [
+                        "arn:aws:sts::184892313502:assumed-role/eks-dev-private-cluster-eks-dev-private-cluster-node/i-02aa62da8603399df"
+                    ],
+                    "canonicalArn": [
+                        "arn:aws:iam::184892313502:role/eks-dev-private-cluster-eks-dev-private-cluster-node"
+                    ],
+                    "principalId": [
+                        "AROASWDDQZ6POKDA3M7HC"
+                    ],
+                    "sessionName": [
+                        "i-02aa62da8603399df"
+                    ]
+                }
+            },
+            "sourceIPs": [
+                "35.179.22.72"
+            ],
+            "userAgent": "kubelet/v1.25.11 (linux/amd64) kubernetes/984f31e",
+            "objectRef": {
+                "resource": "csidrivers",
+                "apiGroup": "storage.k8s.io",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:44:49.727798Z",
+            "stageTimestamp": "2023-07-28T10:51:21.728960Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": ""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Request",
+            "auditID": "1238353f-462f-42b7-bb9d-495380a92e7c",
+            "stage": "ResponseStarted",
+            "requestURI": "/apis/storage.k8s.io/v1/csidrivers?allowWatchBookmarks=true&resourceVersion=504976&timeout=8m13s&timeoutSeconds=493&watch=true",
+            "verb": "watch",
+            "user": {
+                "username": "system:node:ip-10-73-9-232.eu-west-2.compute.internal",
+                "uid": "aws-iam-authenticator:184892313502:AROASWDDQZ6POKDA3M7HC",
+                "groups": [
+                    "system:bootstrappers",
+                    "system:nodes",
+                    "system:authenticated"
+                ],
+                "extra": {
+                    "accessKeyId": [
+                        "ASIASWDDQZ6PC24XVAV5"
+                    ],
+                    "arn": [
+                        "arn:aws:sts::184892313502:assumed-role/eks-dev-private-cluster-eks-dev-private-cluster-node/i-02aa62da8603399df"
+                    ],
+                    "canonicalArn": [
+                        "arn:aws:iam::184892313502:role/eks-dev-private-cluster-eks-dev-private-cluster-node"
+                    ],
+                    "principalId": [
+                        "AROASWDDQZ6POKDA3M7HC"
+                    ],
+                    "sessionName": [
+                        "i-02aa62da8603399df"
+                    ]
+                }
+            },
+            "sourceIPs": [
+                "35.179.22.72"
+            ],
+            "userAgent": "kubelet/v1.25.11 (linux/amd64) kubernetes/984f31e",
+            "objectRef": {
+                "resource": "csidrivers",
+                "apiGroup": "storage.k8s.io",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:21.730600Z",
+            "stageTimestamp": "2023-07-28T10:51:21.731917Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": ""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "e13056de-0d21-4958-9ce0-ffcd83f69fee",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cp-vpc-resource-controller",
+            "verb": "get",
+            "user": {
+                "username": "eks:vpc-resource-controller",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "controller/v0.0.0 (linux/amd64) kubernetes/$Format/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "cp-vpc-resource-controller",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:22.004693Z",
+            "stageTimestamp": "2023-07-28T10:51:22.008624Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by RoleBinding \"eks-vpc-resource-controller-rolebinding/kube-system\" of Role \"eks-vpc-resource-controller-role\" to User \"eks:vpc-resource-controller\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "d8c9de07-858f-4caa-b734-1a69b807e66a",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cp-vpc-resource-controller",
+            "verb": "update",
+            "user": {
+                "username": "eks:vpc-resource-controller",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "controller/v0.0.0 (linux/amd64) kubernetes/$Format/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "cp-vpc-resource-controller",
+                "uid": "e00ac82f-f02e-473e-a76f-89a89b662bf9",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1",
+                "resourceVersion": "504977"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:22.009588Z",
+            "stageTimestamp": "2023-07-28T10:51:22.014366Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by RoleBinding \"eks-vpc-resource-controller-rolebinding/kube-system\" of Role \"eks-vpc-resource-controller-role\" to User \"eks:vpc-resource-controller\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "f7ececaa-fd28-49aa-84d7-57f68beee8d3",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s",
+            "verb": "get",
+            "user": {
+                "username": "system:kube-controller-manager",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "kube-controller-manager/v1.25.11 (linux/amd64) kubernetes/df10951/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "kube-controller-manager",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:22.063363Z",
+            "stageTimestamp": "2023-07-28T10:51:22.066757Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"system:kube-controller-manager\" of ClusterRole \"system:kube-controller-manager\" to User \"system:kube-controller-manager\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "0cb39532-7776-473d-89eb-549a9587631d",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s",
+            "verb": "update",
+            "user": {
+                "username": "system:kube-controller-manager",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "kube-controller-manager/v1.25.11 (linux/amd64) kubernetes/df10951/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "kube-controller-manager",
+                "uid": "2e8ffbe3-42da-4170-a037-c01ac9a0feba",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1",
+                "resourceVersion": "504983"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:22.068045Z",
+            "stageTimestamp": "2023-07-28T10:51:22.075929Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"system:kube-controller-manager\" of ClusterRole \"system:kube-controller-manager\" to User \"system:kube-controller-manager\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Request",
+            "auditID": "9d73b17b-7599-4982-9a29-f1c267432f94",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations?allowWatchBookmarks=true&resourceVersion=503789&timeout=8m17s&timeoutSeconds=497&watch=true",
+            "verb": "watch",
+            "user": {
+                "username": "system:apiserver",
+                "uid": "2c8bed1a-6034-49a5-97cd-7d0ab834ac78",
+                "groups": [
+                    "system:masters"
+                ]
+            },
+            "sourceIPs": [
+                "::1"
+            ],
+            "userAgent": "kube-apiserver/v1.25.11 (linux/amd64) kubernetes/df10951",
+            "objectRef": {
+                "resource": "validatingwebhookconfigurations",
+                "apiGroup": "admissionregistration.k8s.io",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:43:05.159484Z",
+            "stageTimestamp": "2023-07-28T10:51:22.161031Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": ""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Request",
+            "auditID": "5cbbc0a5-92d6-4171-8b26-c7169ee94bbb",
+            "stage": "ResponseStarted",
+            "requestURI": "/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations?allowWatchBookmarks=true&resourceVersion=504981&timeout=7m15s&timeoutSeconds=435&watch=true",
+            "verb": "watch",
+            "user": {
+                "username": "system:apiserver",
+                "uid": "2c8bed1a-6034-49a5-97cd-7d0ab834ac78",
+                "groups": [
+                    "system:masters"
+                ]
+            },
+            "sourceIPs": [
+                "::1"
+            ],
+            "userAgent": "kube-apiserver/v1.25.11 (linux/amd64) kubernetes/df10951",
+            "objectRef": {
+                "resource": "validatingwebhookconfigurations",
+                "apiGroup": "admissionregistration.k8s.io",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:22.161581Z",
+            "stageTimestamp": "2023-07-28T10:51:22.161934Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": ""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "7976448c-e0f2-467c-bbcf-e21e90c70da9",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s",
+            "verb": "get",
+            "user": {
+                "username": "eks:cloud-controller-manager",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "aws-cloud-controller-manager/v0.0.0 (linux/amd64) kubernetes/$Format/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "cloud-controller-manager",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:22.631622Z",
+            "stageTimestamp": "2023-07-28T10:51:22.634334Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"eks:cloud-controller-manager\" of ClusterRole \"eks:cloud-controller-manager\" to User \"eks:cloud-controller-manager\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "8009df6a-050d-4444-9ad4-95ee5de5d5d6",
+            "stage": "ResponseComplete",
+            "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/cloud-controller-manager?timeout=5s",
+            "verb": "update",
+            "user": {
+                "username": "eks:cloud-controller-manager",
+                "groups": [
+                    "system:authenticated"
+                ]
+            },
+            "sourceIPs": [
+                "172.16.112.157"
+            ],
+            "userAgent": "aws-cloud-controller-manager/v0.0.0 (linux/amd64) kubernetes/$Format/leader-election",
+            "objectRef": {
+                "resource": "leases",
+                "namespace": "kube-system",
+                "name": "cloud-controller-manager",
+                "uid": "5f24867c-7937-4182-9e07-a380d989a59a",
+                "apiGroup": "coordination.k8s.io",
+                "apiVersion": "v1",
+                "resourceVersion": "504984"
+            },
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:22.635074Z",
+            "stageTimestamp": "2023-07-28T10:51:22.639784Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"eks:cloud-controller-manager\" of ClusterRole \"eks:cloud-controller-manager\" to User \"eks:cloud-controller-manager\""
+            }
+        },
+        {
+            "kind": "Event",
+            "apiVersion": "audit.k8s.io/v1",
+            "level": "Metadata",
+            "auditID": "12a10ba4-bdcc-44a5-954a-3aa2f0bbdce8",
+            "stage": "ResponseComplete",
+            "requestURI": "/readyz?exclude=kms-provider-0",
+            "verb": "get",
+            "user": {
+                "username": "system:anonymous",
+                "groups": [
+                    "system:unauthenticated"
+                ]
+            },
+            "sourceIPs": [
+                "127.0.0.1"
+            ],
+            "userAgent": "Go-http-client/1.1",
+            "responseStatus": {
+                "metadata": {},
+                "code": 200
+            },
+            "requestReceivedTimestamp": "2023-07-28T10:51:22.739501Z",
+            "stageTimestamp": "2023-07-28T10:51:22.744685Z",
+            "annotations": {
+                "authorization.k8s.io/decision": "allow",
+                "authorization.k8s.io/reason": "RBAC: allowed by ClusterRoleBinding \"system:public-info-viewer\" of ClusterRole \"system:public-info-viewer\" to Group \"system:unauthenticated\""
+            }
+        }
+    ]
+}

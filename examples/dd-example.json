@@ -1,0 +1,47 @@
+{
+    "kind": "Event",
+    "apiVersion": "audit.k8s.io/v1",
+    "level": "Metadata",
+    "auditID": "aa1f4b22-5ef7-427b-a623-33e1dafd0a27",
+    "stage": "ResponseComplete",
+    "requestURI": "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/eks-certificates-controller",
+    "verb": "update",
+    "user": {
+        "username": "eks:certificate-controller",
+        "groups": [
+            "system:authenticated"
+        ]
+    },
+    "sourceIPs": [
+        "172.16.112.157"
+    ],
+    "userAgent": "eks-certificates-controller/v0.0.0 (linux/amd64) kubernetes/$Format",
+    "objectRef": {
+        "resource": "leases",
+        "namespace": "kube-system",
+        "name": "eks-certificates-controller",
+        "uid": "2359244b-0f9c-4db2-a20b-d5b05a7e8f01",
+        "apiGroup": "coordination.k8s.io",
+        "apiVersion": "v1",
+        "resourceVersion": "202372"
+    },
+    "responseStatus": {
+        "metadata": {},
+        "code": 200
+    },
+    "requestReceivedTimestamp": "2023-07-26T23:02:16.873146Z",
+    "stageTimestamp": "2023-07-26T23:02:16.879597Z",
+    "annotations": {
+        "authorization.k8s.io/decision": "allow",
+        "authorization.k8s.io/reason": "RBAC: allowed by RoleBinding \\\"eks:certificate-controller/kube-system\\\" of Role \\\"eks:certificate-controller\\\" to User \\\"eks:certificate-controller\\\""
+    },
+    "aws": {
+      "from": "aws_attributes"
+    },
+    "network": {
+      "from": "unknown"
+    },
+    "http": {
+      "from": "unknown"
+    }
+}
