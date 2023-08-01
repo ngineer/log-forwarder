@@ -1,0 +1,86 @@
+{
+  "messageType": "DATA_MESSAGE",
+  "owner": "184892313502",
+  "logGroup": "/aws/eks/private/cluster",
+  "logStream": "kube-controller-manager-8931388df9e952c5fd5845db255aa7bb",
+  "subscriptionFilters": [
+      "log-forwarder"
+  ],
+  "logEvents": [
+      {
+          "id": "37708245759378580226311439128174472055516328160381960192",
+          "timestamp": 1690896220000,
+          "message": "I0801 13:23:40.777792      10 event.go:291] \"Event occurred\" object=\"obp-test/alpha-ezbob-adapter-v1\" kind=\"HorizontalPodAutoscaler\" apiVersion=\"autoscaling/v2beta2\" type=\"Warning\" reason=\"FailedComputeMetricsReplicas\" message=\"invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)\""
+      },
+      {
+          "id": "37708245759378580226311439128174472055516328160381960193",
+          "timestamp": 1690896220000,
+          "message": "E0801 13:23:40.826972      10 horizontal.go:227] failed to compute desired number of replicas based on listed metrics for Deployment/obp-dev/alpha-otp-service-v1: invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)"
+      },
+      {
+          "id": "37708245759378580226311439128174472055516328160381960194",
+          "timestamp": 1690896220000,
+          "message": "I0801 13:23:40.827207      10 event.go:291] \"Event occurred\" object=\"obp-dev/alpha-otp-service-v1\" kind=\"HorizontalPodAutoscaler\" apiVersion=\"autoscaling/v2beta2\" type=\"Warning\" reason=\"FailedGetResourceMetric\" message=\"failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)\""
+      },
+      {
+          "id": "37708245759378580226311439128174472055516328160381960195",
+          "timestamp": 1690896220000,
+          "message": "I0801 13:23:40.827222      10 event.go:291] \"Event occurred\" object=\"obp-dev/alpha-otp-service-v1\" kind=\"HorizontalPodAutoscaler\" apiVersion=\"autoscaling/v2beta2\" type=\"Warning\" reason=\"FailedComputeMetricsReplicas\" message=\"invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)\""
+      },
+      {
+          "id": "37708245759378580226311439128174472055516328160381960196",
+          "timestamp": 1690896220000,
+          "message": "E0801 13:23:40.875495      10 horizontal.go:227] failed to compute desired number of replicas based on listed metrics for Deployment/obp-test/alpha-iban-adapter-v1: invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)"
+      },
+      {
+          "id": "37708245759378580226311439128174472055516328160381960197",
+          "timestamp": 1690896220000,
+          "message": "I0801 13:23:40.875549      10 event.go:291] \"Event occurred\" object=\"obp-test/alpha-iban-adapter-v1\" kind=\"HorizontalPodAutoscaler\" apiVersion=\"autoscaling/v2beta2\" type=\"Warning\" reason=\"FailedGetResourceMetric\" message=\"failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)\""
+      },
+      {
+          "id": "37708245759378580226311439128174472055516328160381960198",
+          "timestamp": 1690896220000,
+          "message": "I0801 13:23:40.875572      10 event.go:291] \"Event occurred\" object=\"obp-test/alpha-iban-adapter-v1\" kind=\"HorizontalPodAutoscaler\" apiVersion=\"autoscaling/v2beta2\" type=\"Warning\" reason=\"FailedComputeMetricsReplicas\" message=\"invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)\""
+      },
+      {
+          "id": "37708245759378580226311439128174472055516328160381960199",
+          "timestamp": 1690896220000,
+          "message": "E0801 13:23:40.976047      10 horizontal.go:227] failed to query scale subresource for Deployment/insurance-dev/alpha-insurance-ops-service-v1: deployments/scale.apps \"alpha-insurance-ops-service-v1\" not found"
+      },
+      {
+          "id": "37708245759378580226311439128174472055516328160381960200",
+          "timestamp": 1690896220000,
+          "message": "I0801 13:23:40.976103      10 event.go:291] \"Event occurred\" object=\"insurance-dev/alpha-insurance-ops-service-v1\" kind=\"HorizontalPodAutoscaler\" apiVersion=\"autoscaling/v2beta2\" type=\"Warning\" reason=\"FailedGetScale\" message=\"deployments/scale.apps \\\"alpha-insurance-ops-service-v1\\\" not found\""
+      },
+      {
+          "id": "37708245781679325424842062269710190328164689666362376201",
+          "timestamp": 1690896221000,
+          "message": "E0801 13:23:41.025987      10 horizontal.go:227] failed to compute desired number of replicas based on listed metrics for Deployment/obp-dev/alpha-config-service-v1: invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)"
+      },
+      {
+          "id": "37708245781679325424842062269710190328164689666362376202",
+          "timestamp": 1690896221000,
+          "message": "I0801 13:23:41.026045      10 event.go:291] \"Event occurred\" object=\"obp-dev/alpha-config-service-v1\" kind=\"HorizontalPodAutoscaler\" apiVersion=\"autoscaling/v2beta2\" type=\"Warning\" reason=\"FailedGetResourceMetric\" message=\"failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)\""
+      },
+      {
+          "id": "37708245781679325424842062269710190328164689666362376203",
+          "timestamp": 1690896221000,
+          "message": "I0801 13:23:41.026069      10 event.go:291] \"Event occurred\" object=\"obp-dev/alpha-config-service-v1\" kind=\"HorizontalPodAutoscaler\" apiVersion=\"autoscaling/v2beta2\" type=\"Warning\" reason=\"FailedComputeMetricsReplicas\" message=\"invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)\""
+      },
+      {
+          "id": "37708245781679325424842062269710190328164689666362376204",
+          "timestamp": 1690896221000,
+          "message": "E0801 13:23:41.076657      10 horizontal.go:227] failed to compute desired number of replicas based on listed metrics for Deployment/obp-dev/alpha-banking-ops-service-v1: invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)"
+      },
+      {
+          "id": "37708245781679325424842062269710190328164689666362376205",
+          "timestamp": 1690896221000,
+          "message": "I0801 13:23:41.076716      10 event.go:291] \"Event occurred\" object=\"obp-dev/alpha-banking-ops-service-v1\" kind=\"HorizontalPodAutoscaler\" apiVersion=\"autoscaling/v2beta2\" type=\"Warning\" reason=\"FailedGetResourceMetric\" message=\"failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)\""
+      },
+      {
+          "id": "37708245781679325424842062269710190328164689666362376206",
+          "timestamp": 1690896221000,
+          "message": "I0801 13:23:41.076743      10 event.go:291] \"Event occurred\" object=\"obp-dev/alpha-banking-ops-service-v1\" kind=\"HorizontalPodAutoscaler\" apiVersion=\"autoscaling/v2beta2\" type=\"Warning\" reason=\"FailedComputeMetricsReplicas\" message=\"invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)\""
+      }
+  ]
+}

@@ -9,7 +9,8 @@
       "region": "eu-west-1",
       "runtime": "python3.9",
       "environment": {
-        "S3_BUCKET_NAME": "alpha-dev-private-eks-logs"
+        "S3_BUCKET_NAME": "alpha-dev-private-eks-logs",
+        "LOGLEVEL": "DEBUG"
       },
       "stage": "dev",
       "versionFunctions": true,
@@ -177,7 +178,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/log-forwarder/dev/1690759822105-2023-07-30T23:30:22.105Z/log-forwarder.zip"
+                "S3Key": "serverless/log-forwarder/dev/1690930490337-2023-08-01T22:54:50.337Z/log-forwarder.zip"
               },
               "Handler": "forwarder.handler",
               "Runtime": "python3.9",
@@ -186,7 +187,8 @@
               "Timeout": 6,
               "Environment": {
                 "Variables": {
-                  "S3_BUCKET_NAME": "alpha-dev-private-eks-logs"
+                  "S3_BUCKET_NAME": "alpha-dev-private-eks-logs",
+                  "LOGLEVEL": "DEBUG"
                 }
               },
               "Role": {
@@ -200,14 +202,14 @@
               "ForwarderLogGroup"
             ]
           },
-          "ForwarderLambdaVersionVIcl8xENkWfx7HzwYV23XGlRR40U9uR7VzOiyvN9GQ": {
+          "ForwarderLambdaVersionVpXhuIEw6hnl2nYk69zdcx5yTuKk2vI3E0nOc1xBdqM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ForwarderLambdaFunction"
               },
-              "CodeSha256": "BtNiN2q81BSNcAMwZc7lzCijip5fMFSPlr+bgQpNGPU="
+              "CodeSha256": "bDn0B4h3SqhNuwKuIaY8SMznGJ3RZcHr+xoxyr+Pcf8="
             }
           }
         },
@@ -223,7 +225,7 @@
           "ForwarderLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ForwarderLambdaVersionVIcl8xENkWfx7HzwYV23XGlRR40U9uR7VzOiyvN9GQ"
+              "Ref": "ForwarderLambdaVersionVpXhuIEw6hnl2nYk69zdcx5yTuKk2vI3E0nOc1xBdqM"
             },
             "Export": {
               "Name": "sls-log-forwarder-dev-ForwarderLambdaFunctionQualifiedArn"
@@ -326,7 +328,7 @@
         "timeout": 6,
         "runtime": "python3.9",
         "vpc": {},
-        "versionLogicalId": "ForwarderLambdaVersionVIcl8xENkWfx7HzwYV23XGlRR40U9uR7VzOiyvN9GQ"
+        "versionLogicalId": "ForwarderLambdaVersionVpXhuIEw6hnl2nYk69zdcx5yTuKk2vI3E0nOc1xBdqM"
       }
     },
     "configValidationMode": "warn",
@@ -346,7 +348,7 @@
     "artifact": "/Users/umar/projects/log-forwarder/.serverless/log-forwarder.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/log-forwarder/dev/1690759822105-2023-07-30T23:30:22.105Z",
+    "artifactDirectoryName": "serverless/log-forwarder/dev/1690930490337-2023-08-01T22:54:50.337Z",
     "artifact": "log-forwarder.zip"
   }
 }

@@ -9,6 +9,7 @@ provider:
 
   environment:
     S3_BUCKET_NAME: alpha-dev-private-eks-logs
+    LOGLEVEL: DEBUG
 
 functions:
   forwarder:

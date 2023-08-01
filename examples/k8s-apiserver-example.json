@@ -1,0 +1,31 @@
+{
+  "messageType": "DATA_MESSAGE",
+  "owner": "184892313502",
+  "logGroup": "/aws/eks/private/cluster",
+  "logStream": "kube-apiserver-8931388df9e952c5fd5845db255aa7bb",
+  "subscriptionFilters": [
+      "log-forwarder"
+  ],
+  "logEvents": [
+      {
+          "id": "37708245714777089829250192842088835041678977733222727680",
+          "timestamp": 1690896218000,
+          "message": "W0801 13:23:38.427708      10 dispatcher.go:170] Failed calling webhook, failing open mutation.gatekeeper.sh: failed calling webhook \"mutation.gatekeeper.sh\": Post \"https://gatekeeper-webhook-service.gatekeeper-system.svc:443/v1/mutate?timeout=1s\": no endpoints available for service \"gatekeeper-webhook-service\""
+      },
+      {
+          "id": "37708245714777089829250192842088835041678977733222727681",
+          "timestamp": 1690896218000,
+          "message": "E0801 13:23:38.427742      10 dispatcher.go:171] failed calling webhook \"mutation.gatekeeper.sh\": Post \"https://gatekeeper-webhook-service.gatekeeper-system.svc:443/v1/mutate?timeout=1s\": no endpoints available for service \"gatekeeper-webhook-service\""
+      },
+      {
+          "id": "37708245714777089829250192842088835041678977733222727682",
+          "timestamp": 1690896218000,
+          "message": "W0801 13:23:38.428067      10 dispatcher.go:129] Failed calling webhook, failing open validation.gatekeeper.sh: failed calling webhook \"validation.gatekeeper.sh\": Post \"https://gatekeeper-webhook-service.gatekeeper-system.svc:443/v1/admit?timeout=3s\": no endpoints available for service \"gatekeeper-webhook-service\""
+      },
+      {
+          "id": "37708245714777089829250192842088835041678977733222727683",
+          "timestamp": 1690896218000,
+          "message": "E0801 13:23:38.428086      10 dispatcher.go:130] failed calling webhook \"validation.gatekeeper.sh\": Post \"https://gatekeeper-webhook-service.gatekeeper-system.svc:443/v1/admit?timeout=3s\": no endpoints available for service \"gatekeeper-webhook-service\""
+      }
+  ]
+}
