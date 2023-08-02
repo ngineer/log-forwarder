@@ -162,7 +162,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/log-forwarder/dev/1690930490337-2023-08-01T22:54:50.337Z/log-forwarder.zip"
+          "S3Key": "serverless/log-forwarder/dev/1690936360837-2023-08-02T00:32:40.837Z/log-forwarder.zip"
         },
         "Handler": "forwarder.handler",
         "Runtime": "python3.9",
@@ -171,7 +171,8 @@
         "Timeout": 6,
         "Environment": {
           "Variables": {
-            "S3_BUCKET_NAME": "alpha-dev-private-eks-logs",
+            "S3_CONTROLPLANE_BUCKET_NAME": "alpha-dev-private-eks-logs",
+            "S3_DATAPLANE_BUCKET_NAME": "alpha-dev-public-eks-logs",
             "LOGLEVEL": "DEBUG"
           }
         },
@@ -186,14 +187,14 @@
         "ForwarderLogGroup"
       ]
     },
-    "ForwarderLambdaVersionVpXhuIEw6hnl2nYk69zdcx5yTuKk2vI3E0nOc1xBdqM": {
+    "ForwarderLambdaVersionpIG0sVsX54GsIoSCuqKHT3fcYxPUHl7qftzdG7mho": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ForwarderLambdaFunction"
         },
-        "CodeSha256": "bDn0B4h3SqhNuwKuIaY8SMznGJ3RZcHr+xoxyr+Pcf8="
+        "CodeSha256": "2uKyqi+n1AJvVPkRxw1pcr9IbhT5lybntVuTh8r8LJg="
       }
     }
   },
@@ -209,7 +210,7 @@
     "ForwarderLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ForwarderLambdaVersionVpXhuIEw6hnl2nYk69zdcx5yTuKk2vI3E0nOc1xBdqM"
+        "Ref": "ForwarderLambdaVersionpIG0sVsX54GsIoSCuqKHT3fcYxPUHl7qftzdG7mho"
       },
       "Export": {
         "Name": "sls-log-forwarder-dev-ForwarderLambdaFunctionQualifiedArn"

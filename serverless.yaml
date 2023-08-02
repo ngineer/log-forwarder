@@ -8,7 +8,8 @@ provider:
   runtime: python3.9
 
   environment:
-    S3_BUCKET_NAME: alpha-dev-private-eks-logs
+    S3_CONTROLPLANE_BUCKET_NAME: alpha-dev-private-eks-logs
+    S3_DATAPLANE_BUCKET_NAME: alpha-dev-public-eks-logs
     LOGLEVEL: DEBUG
 
 functions:
